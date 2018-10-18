@@ -1,0 +1,12 @@
+bazel-bin/tensorflow/contrib/lite/toco/toco \
+--input_file=semanticsegmentation_frozen_person_32.pb  \
+--input_format=TENSORFLOW_GRAPHDEF \
+--output_format=TFLITE \
+--output_file=output/semanticsegmentation_frozen_person_quantized_32.tflite \
+--input_shapes=1,128,128,3 \
+--inference_type=FLOAT \
+--input_type=FLOAT \
+--input_arrays=input \
+--output_arrays=output/BiasAdd \
+--post_training_quantize
+

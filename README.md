@@ -1,5 +1,6 @@
-# TensorflowLite-UNet
-Implementation of UNet by Tensorflow Lite.
+# Tensorflow Lite-UNet
+Implementation of UNet by Tensorflow Lite.  
+Semantic segmentation without using GPU with RaspberryPi.  
   
 ============================================================================================  
 [October 18, 2018]  

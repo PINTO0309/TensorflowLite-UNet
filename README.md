@@ -3,6 +3,8 @@ Implementation of UNet by Tensorflow Lite.
 Semantic segmentation without using GPU with RaspberryPi.  
 In order to maximize the learning efficiency of the model, this learns only the "Person" class of VOC2012.　　
   
+**As of October 18, 2018, README is under construction.**
+  
 **============================================================================================  
 [October 18, 2018]  
 Added correspondence and one class segmentation of TensorflowLite to tks10/segmentation_unet.  

@@ -1,9 +1,9 @@
 # Tensorflow Lite-UNet
 Implementation of UNet by Tensorflow Lite.  
 Semantic segmentation without using GPU with RaspberryPi.  
-In order to maximize the learning efficiency of the model, this learns only the "Person" class of VOC2012.　　
+In order to maximize the learning efficiency of the model, this learns only the "Person" class of VOC2012.  
   
-**As of October 18, 2018, README is under construction.**
+**As of October 18, 2018, README is under construction.**  
   
 **============================================================================================  
 [October 18, 2018]  

@@ -77,7 +77,7 @@ class Loader(object):
         for image in Loader.image_generator(paths_segmented, init_size, normalization=False):
             images_segmented.append(image)
             if len(images_segmented) % 200 == 0:
-                print(".", end="", flush="True")
+                print(".", end="", flush=True)
         print(" Completed")
         assert len(images_original) == len(images_segmented)
 
@@ -86,26 +86,8 @@ class Loader(object):
         images_segmented = np.asarray(images_segmented, dtype=np.uint8)
 
         # Change indices which correspond to "void" from 255
-        images_segmented = np.where(images_segmented == 1, 0, images_segmented)
-        images_segmented = np.where(images_segmented == 2, 0, images_segmented)
-        images_segmented = np.where(images_segmented == 3, 0, images_segmented)
-        images_segmented = np.where(images_segmented == 4, 0, images_segmented)
-        images_segmented = np.where(images_segmented == 5, 0, images_segmented)
-        images_segmented = np.where(images_segmented == 6, 0, images_segmented)
-        images_segmented = np.where(images_segmented == 7, 0, images_segmented)
-        images_segmented = np.where(images_segmented == 8, 0, images_segmented)
-        images_segmented = np.where(images_segmented == 9, 0, images_segmented)
-        images_segmented = np.where(images_segmented == 10, 0, images_segmented)
-        images_segmented = np.where(images_segmented == 11, 0, images_segmented)
-        images_segmented = np.where(images_segmented == 12, 0, images_segmented)
-        images_segmented = np.where(images_segmented == 13, 0, images_segmented)
-        images_segmented = np.where(images_segmented == 14, 0, images_segmented)
+        images_segmented = np.where((images_segmented != 15) & (images_segmented != 255), 0, images_segmented)
         images_segmented = np.where(images_segmented == 15, 1, images_segmented)
-        images_segmented = np.where(images_segmented == 16, 0, images_segmented)
-        images_segmented = np.where(images_segmented == 17, 0, images_segmented)
-        images_segmented = np.where(images_segmented == 18, 0, images_segmented)
-        images_segmented = np.where(images_segmented == 19, 0, images_segmented)
-        images_segmented = np.where(images_segmented == 20, 0, images_segmented)
         images_segmented = np.where(images_segmented == 255, len(DataSet.CATEGORY)-1, images_segmented)
 
         # One hot encoding using identity matrix.

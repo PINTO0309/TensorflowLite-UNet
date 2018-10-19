@@ -17,6 +17,11 @@ cap.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
 cv2.namedWindow('FPS', cv2.WINDOW_AUTOSIZE)
 
 seg_image = Image.open("data_set/VOCdevkit/person/SegmentationClass/009649.png")
+interpreter = tf.contrib.lite.Interpreter(model_path="model/semanticsegmentation_frozen_person_quantized_08.tflite")
+interpreter.allocate_tensors()
+input_details = interpreter.get_input_details()
+output_details = interpreter.get_output_details()
+input_shape = input_details[0]['shape']
 
 while True:
     t1 = time.perf_counter()
@@ -30,11 +35,6 @@ while True:
     prepimg = prepimg[np.newaxis, :, :, :]
 
     # Segmentation
-    interpreter = tf.contrib.lite.Interpreter(model_path="model/semanticsegmentation_frozen_person_quantized_32.tflite")
-    interpreter.allocate_tensors()
-    input_details = interpreter.get_input_details()
-    output_details = interpreter.get_output_details()
-    input_shape = input_details[0]['shape']
     interpreter.set_tensor(input_details[0]['index'], np.array(prepimg, dtype=np.float32))
     t1 = time.time()
     interpreter.invoke()

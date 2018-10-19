@@ -29,7 +29,7 @@ if __name__ == '__main__':
     prepimg = prepimg[np.newaxis, :, :, :]
 
     # Segmentation
-    interpreter = tf.contrib.lite.Interpreter(model_path="semanticsegmentation_frozen_person_quantized_32.tflite")
+    interpreter = tf.contrib.lite.Interpreter(model_path="model/semanticsegmentation_frozen_person_quantized_32.tflite")
     interpreter.allocate_tensors()
     input_details = interpreter.get_input_details()
     output_details = interpreter.get_output_details()

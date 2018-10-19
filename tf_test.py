@@ -2,9 +2,6 @@ import sys, time
 import numpy as np
 import tensorflow as tf
 from PIL import Image
-from util import loader as ld
-from util import model_infer as model
-from util import repoter as rp
 
 if __name__ == '__main__':
 

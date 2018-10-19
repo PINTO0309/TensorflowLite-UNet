@@ -77,7 +77,7 @@ class Loader(object):
         for image in Loader.image_generator(paths_segmented, init_size, normalization=False):
             images_segmented.append(image)
             if len(images_segmented) % 200 == 0:
-                print(".", end="", flush="True")
+                print(".", end="", flush=True)
         print(" Completed")
         assert len(images_original) == len(images_segmented)
 

@@ -36,7 +36,6 @@ while True:
 
     # Segmentation
     interpreter.set_tensor(input_details[0]['index'], np.array(prepimg, dtype=np.float32))
-    t1 = time.time()
     interpreter.invoke()
     outputs = interpreter.get_tensor(output_details[0]['index'])
 

@@ -42,7 +42,9 @@ if __name__ == '__main__':
     sess = tf.Session()
 
     # Segmentation
+    t1 = time.time()
     outputs = sess.run("output/BiasAdd:0", {"input:0":[prepimg]})
+    print("elapsedtime =", time.time() - t1)
 
     # Get a color palette
     palette = seg_image.getpalette()

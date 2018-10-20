@@ -287,6 +287,18 @@ The method to extract only the "Person" image is to download the VOC2012 dataset
 It is sufficient to extract all the images with the flag "1" set in **`VOCdevkit/VOC2012/ImageSets/Main/person_train.txt`** or **`VOCdevkit/VOC2012/ImageSets/Main/person_trainval.txt`**.  
 Even when extracting images other than "Person", it is possible to extract from the file name and extract with the same number.  
 Note that it is necessary to extract files one by one from each folder while synchronizing files of the same name from both the **`JPEGImages`** folder and **`SegmentationClass`** folder.  
+```
+$ cd ~
+$ git clone https://github.com/PINTO0309/TensorflowLite-UNet.git
+```
+With only the training image of VOC2012, the number of samples is as small as 794, which is a major over-learning.  
+Execute the following program and inflate the image file by 20 times.  
+The inflating operation is carried out at random as follows.  
+ (1) Smoothing  
+ (2) Gaussian noise addition  
+ (3) Salt & Pepper noise addition  
+ (4) Rotation  
+ (5) Inversion  
 
 #### (2) UNet learning results
 #### (3) Slimming the checkpoint file

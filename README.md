@@ -459,6 +459,17 @@ if __name__ == '__main__':
 </div></details><br>
 
 #### (4) Generate compressed .pb file
+Execute the following command to generate compressed .pb file.  
+Unless you have made any adjustments to the learning program, a 31.1 MB .pb file of the large size model is generated.  
+```
+python freeze_graph.py \
+--input_graph=model/semanticsegmentation_person.pbtxt \
+--input_checkpoint=model/deployfinal.ckpt \
+--output_graph=model/semanticsegmentation_frozen_person.pb \
+--output_node_names=output/BiasAdd \
+--input_binary=False
+```
+
 ### 4. Execution environment construction
 ### 5. Operation verification
 

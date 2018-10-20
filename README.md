@@ -504,8 +504,60 @@ $ sudo apt install -y python-scipy python3-scipy
 ```
 
 #### (4) Convert UNet's .pb file to .tflite file on RaspberryPi3
+Convert learned data from Protocol Buffer format to Flat Buffer format for Tensorflow Lite.  
+```
+$ cd ~/tensorflow
+$ mkdir output
+$ cp ~/TensorflowLite-UNet/model/semanticsegmentation_frozen_person_32.pb .
+```
+.pb ->. tflite conversion, quantization (Quantize) valid.  
+```
+sudo bazel-bin/tensorflow/contrib/lite/toco/toco \
+--input_file=semanticsegmentation_frozen_person_32.pb  \
+--input_format=TENSORFLOW_GRAPHDEF \
+--output_format=TFLITE \
+--output_file=output/semanticsegmentation_frozen_person_quantized_32.tflite \
+--input_shapes=1,128,128,3 \
+--inference_type=FLOAT \
+--input_type=FLOAT \
+--input_arrays=input \
+--output_arrays=output/BiasAdd \
+--post_training_quantize
+```
 
 ### 5. Operation verification
+1. Validation of RaspberryPi3 in ENet model by Tensorflow v1.11.0.  
+```
+$ cd ~/TensorFlow-ENet
+$ python predict_segmentation_CPU.py
+```
+
+2. Validation of RaspberryPi3 in quantization effective UNet model by Tensorflow Lite v1.11.0.  
+```
+$ cp ~/tensorflow/output/semanticsegmentation_frozen_person_quantized_32.tflite ~/TensorflowLite-UNet/model
+$ ~/TensorflowLite-UNet
+$ python tflite_test.py
+```
+
+## [Note] Conversion of ENet to tflite
+When converting .tflite, it is an error that "custom operation can not be installed". 
+Following the tutorial on Tensorflow Lite, you need to implement custom operations yourself in C ++.  
+Below is error message sample.  
+```
+pi@raspberrypi:~/TensorflowLite-ENet $ python main.py
+Traceback (most recent call last):
+  File "main.py", line 5, in <module>
+    interpreter = tf.contrib.lite.Interpreter(model_path="semanticsegmentation_enet_non_quantized.tflite")
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/contrib/lite/python/interpreter.py", line 53, in __init__
+    model_path))
+ValueError: Didn't find custom op for name 'FloorMod' with version 1
+Didn't find custom op for name 'Range' with version 1
+Didn't find custom op for name 'Rank' with version 1
+Didn't find custom op for name 'Abs' with version 1
+Didn't find custom op for name 'MaxPoolWithArgmax' with version 1
+Didn't find custom op for name 'ScatterNd' with version 1
+Registration failed.
+```
 
 ## Reference article, thanks
 **https://qiita.com/tktktks10/items/0f551aea27d2f62ef708**  

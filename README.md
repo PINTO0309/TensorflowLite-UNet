@@ -154,7 +154,38 @@ Execute the following command only when you want to learn with your own data set
 If you do not need to learn with your own data set, you can skip this phase.  
 Features and learning logic of this model are not touched on this occasion, but please refer Clone repository if you are interested. **[PINTO0309 - Tensorflow-ENet - Github](https://github.com/PINTO0309/TensorFlow-ENet.git)**  
 To learn with your own data set, you just deploy your favorite image dataset to a given path before running **`./train.sh`**.  
-Many input parameters such as the destination path of the data set are defined in **`train_enet.py`**, so you can process **`train.sh`** according to your preference.
+Many input parameters such as the destination path of the data set are defined in **`train_enet.py`**, so you can process **`train.sh`** according to your preference.  
+
+<details><summary>Shell parameter example·Default value and explanation</summary><div>
+
+```
+#Directory arguments
+flags.DEFINE_string('dataset_dir', './dataset', 'The dataset directory to find the train, validation and test images.')
+flags.DEFINE_string('logdir', './log/original', 'The log directory to save your checkpoint and event files.')
+flags.DEFINE_boolean('save_images', True, 'Whether or not to save your images.')
+flags.DEFINE_boolean('combine_dataset', False, 'If True, combines the validation with the train dataset.')
+
+#Training arguments
+flags.DEFINE_integer('num_classes', 12, 'The number of classes to predict.')
+flags.DEFINE_integer('batch_size', 10, 'The batch_size for training.')
+flags.DEFINE_integer('eval_batch_size', 25, 'The batch size used for validation.')
+flags.DEFINE_integer('image_height', 360, "The input height of the images.")
+flags.DEFINE_integer('image_width', 480, "The input width of the images.")
+flags.DEFINE_integer('num_epochs', 300, "The number of epochs to train your model.")
+flags.DEFINE_integer('num_epochs_before_decay', 100, 'The number of epochs before decaying your learning rate.')
+flags.DEFINE_float('weight_decay', 2e-4, "The weight decay for ENet convolution layers.")
+flags.DEFINE_float('learning_rate_decay_factor', 1e-1, 'The learning rate decay factor.')
+flags.DEFINE_float('initial_learning_rate', 5e-4, 'The initial learning rate for your training.')
+flags.DEFINE_string('weighting', "MFB", 'Choice of Median Frequency Balancing or the custom ENet class weights.')
+
+#Architectural changes
+flags.DEFINE_integer('num_initial_blocks', 1, 'The number of initial blocks to use in ENet.')
+flags.DEFINE_integer('stage_two_repeat', 2, 'The number of times to repeat stage two.')
+flags.DEFINE_boolean('skip_connections', False, 'If True, perform skip connections from encoder to decoder.')
+```
+
+</div></details><br>
+
 ```
 $ cd ~/TensorFlow-ENet
 $ chmod 777 train.sh

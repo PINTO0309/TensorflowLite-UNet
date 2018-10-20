@@ -83,6 +83,11 @@ My Japanese Article is below.
 - MicroSD Card 32GB
 
 ## Environment construction procedure
+### 1. Construction of learning environment
+### 2. Learning ENet and streamlining .pb
+### 3. Learning UNet and streamlining .pb
+### 4. Execution environment construction
+### 5. Operation verification
 
 ## Reference article, thanks
 **https://qiita.com/tktktks10/items/0f551aea27d2f62ef708**  

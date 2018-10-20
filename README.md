@@ -24,7 +24,7 @@ I confirmed the operation with Tensorflow v1.11.0 and Tensorflow-gpu v1.11.0, Te
 </div></details><br><br>
 
 ## Inference images
-
+![img01](https://github.com/PINTO0309/TensorflowLite-UNet/raw/master/media/01.jpeg) ![img02](https://github.com/PINTO0309/TensorflowLite-UNet/raw/master/media/02.jpeg)
 ## Environment
 
 ## Environment construction procedure

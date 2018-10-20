@@ -34,8 +34,16 @@ I confirmed the operation with Tensorflow v1.11.0 and Tensorflow-gpu v1.11.0, Te
 ※ Inference time in 8th generation Corei7 1.13 sec**  
 <img src="https://github.com/PINTO0309/TensorflowLite-UNet/raw/master/media/03.jpeg" width="380"> <img src="https://github.com/PINTO0309/TensorflowLite-UNet/raw/master/media/04.jpeg" width="380">
   
+**＜Test generated image by GPU version Tensorflow Lite v1.11.0 (Self build) + UNet + Ubuntu16.04 PC Part 1＞  
+※ Size of learning model 9.9 MB  
+※ Inference time with Geforce GTX 1070 0.87 sec  
+※ CUDA 9.0 and cuDNN 7.0 are valid**  
 <img src="https://github.com/PINTO0309/TensorflowLite-UNet/raw/master/media/05.jpeg" width="380"> <img src="https://github.com/PINTO0309/TensorflowLite-UNet/raw/master/media/06.jpeg" width="380">
   
+**＜Test generated image by GPU version Tensorflow Lite v1.11.0 (Self build) + UNet + Ubuntu16.04 PC Part 2＞  
+※ Size of learning model 625 KB  
+※ Inference time with Geforce GTX 1070 0.07 sec (70 ms)  
+※ CUDA 9.0 and cuDNN 7.0 are valid**  
 <img src="https://github.com/PINTO0309/TensorflowLite-UNet/raw/master/media/07.jpeg" width="380"> <img src="https://github.com/PINTO0309/TensorflowLite-UNet/raw/master/media/08.jpeg" width="380">
   
 <img src="https://github.com/PINTO0309/TensorflowLite-UNet/raw/master/media/09.jpeg" width="380"> <img src="https://github.com/PINTO0309/TensorflowLite-UNet/raw/master/media/10.jpeg" width="380">

@@ -471,6 +471,11 @@ python freeze_graph.py \
 ```
 
 ### 4. Execution environment construction
+#### (1) RaspberryPi3 "SWAP" area extension
+#### (2) Introduction of Bazel to RaspberryPi3 (Google made build tool)
+#### (3) Introduction of Tensorflow Lite to RaspberryPi3
+#### (4) Convert UNet's .pb file to .tflite file on RaspberryPi3
+
 ### 5. Operation verification
 
 ## Reference article, thanks

@@ -153,6 +153,8 @@ $ git checkout pinto0309work
 Execute the following command only when you want to learn with your own data set.  
 If you do not need to learn with your own data set, you can skip this phase.  
 Features and learning logic of this model are not touched on this occasion, but please refer Clone repository if you are interested. **[PINTO0309 - Tensorflow-ENet - Github](https://github.com/PINTO0309/TensorFlow-ENet.git)**  
+To learn with your own data set, you just deploy your favorite image dataset to a given path before running **`./train.sh`**.  
+Many input parameters such as the destination path of the data set are defined in **`train_enet.py`**, so you can process train.sh according to your preference.
 ```
 $ cd ~/TensorFlow-ENet
 $ chmod 777 train.sh
@@ -160,6 +162,7 @@ $ ./train.sh
 ```
 
 #### (2) Slimming the checkpoint file
+
 #### (3) Generate compressed .pb file
 ### 3. Learning UNet and streamlining .pb
 #### (1) Learning UNet

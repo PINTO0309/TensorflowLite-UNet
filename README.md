@@ -69,3 +69,22 @@ I confirmed the operation with Tensorflow v1.11.0 and Tensorflow-gpu v1.11.0, Te
 ## Environment construction procedure
 
 ## Reference article, thanks
+**https://qiita.com/tktktks10/items/0f551aea27d2f62ef708**  
+**https://github.com/tks10/segmentation_unet.git**  
+**http://blog.gclue.com/?p=836**  
+**https://stackoverflow.com/questions/50902067/how-to-import-the-tensorflow-lite-interpreter-in-python**  
+**https://heartbeat.fritz.ai/compiling-a-tensorflow-lite-build-with-custom-operations-cf6330ee30e2**  
+**http://tensorflow.classcat.com/category/tensorflow-lite/**  
+**http://tensorflow.classcat.com/2016/03/04/tensorflow-how-to-adding-a-new-op/**  
+**https://tyfkda.github.io/blog/2016/09/14/tensorflow-protobuf.html**  
+**https://stackoverflow.com/questions/52400043/how-to-get-toco-to-work-with-shape-none-24-24-3**  
+**https://groups.google.com/a/tensorflow.org/forum/#!msg/tflite/YlTLq9fGnvE/SVfhSbklBAAJ**  
+**https://www.tensorflow.org/lite/rpi**  
+**https://www.tensorflow.org/api_docs/python/tf/contrib/lite/TocoConverter**  
+**https://www.tensorflow.org/lite/convert/python_api**  
+**https://www.tensorflow.org/lite/devguide**  
+**https://www.tensorflow.org/lite/convert/cmdline_examples**  
+**https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/lite**  
+**https://github.com/tensorflow/tensorflow/blob/master/tensorflow/contrib/lite/g3doc/custom_operators.md**  
+**https://github.com/tensorflow/tensorflow/issues/21574**  
+**https://docs.bazel.build/versions/master/command-line-reference.html**  

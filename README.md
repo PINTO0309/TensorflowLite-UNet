@@ -193,6 +193,75 @@ $ ./train.sh
 ```
 
 #### (2) Slimming the checkpoint file
+It is carried out after learning is over.  
+Eliminate all unnecessary variables and optimization processes that are unnecessary at the inference stage, and compress the file size.  
+After processing, it is compressed to about one-third of the original file size.  
+Since the number part immediately following **`.ckpt-`** is the iteration number of learning, there is a possibility that it differs for each progress of learning.  
+Also processed already processed on Clone original repository.  
+  
+Based on the following three files under the checkpoint folder,  
+**`model.ckpt-13800.data-00000-of-00001`**  
+**`model.ckpt-13800.index`**  
+**`model.ckpt-13800.meta`**  
+  
+Generate the following four compressed files.  
+**`modelfinal.ckpt-13800.data-00000-of-00001`**  
+**`modelfinal.ckpt-13800.index`**  
+**`modelfinal.ckpt-13800.meta`**  
+**`semanticsegmentation_enet.pbtxt`**  
+  
+Execute the following command.
+```
+$ python slim_infer.py
+```
+  
+Although I have not done anything special, I just delete almost all the logic at learning and restore -> save.  
+For reference, paste the logic below.  
+When you learn with your own data set, the ckpt file name is different,  
+**`saver.restore(..)`**  
+**`saver.save(..)`**  
+It is necessary to change the prefix of the ckpt file described in the section before execution.  
+In that case, it is unnecessary to specify the part after the number, **`.data-00000-of-00001`** **`.index`** **`.meta`**  
+  
+<details><summary>The logic of slim_infer.py</summary><div>
+
+```
+import tensorflow as tf
+from enet import ENet, ENet_arg_scope
+slim = tf.contrib.slim
+
+def main():
+
+    graph = tf.Graph()
+    with graph.as_default():
+
+        with slim.arg_scope(ENet_arg_scope()):
+            inputs = tf.placeholder(tf.float32, [None, 360, 480, 3], name="input") 
+            logits, probabilities = ENet(inputs,
+                                         12,
+                                         batch_size=1,
+                                         is_training=False,
+                                         reuse=None,
+                                         num_initial_blocks=1,
+                                         stage_two_repeat=2,
+                                         skip_connections=False)
+
+        saver = tf.train.Saver(tf.global_variables())
+        sess  = tf.Session()
+        sess.run(tf.global_variables_initializer())
+        sess.run(tf.local_variables_initializer())
+
+        saver.restore(sess, './checkpoint/model.ckpt-13800')
+        saver.save(sess, './checkpoint/modelfinal.ckpt-13800')
+
+        graphdef = graph.as_graph_def()
+        tf.train.write_graph(graphdef, './checkpoint', 'semanticsegmentation_enet.pbtxt', as_text=True)
+
+if __name__ == '__main__':
+    main()
+```
+
+</div></details><br>
 
 #### (3) Generate compressed .pb file
 ### 3. Learning UNet and streamlining .pb

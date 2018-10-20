@@ -279,6 +279,15 @@ $ python freeze_graph.py \
 
 ### 3. Learning UNet and streamlining .pb
 #### (1) Learning UNet
+Execute the following command to Clone the learning repository.  
+All images are extracted only for the image files that show "Person", and they are already deployed in the dataset folder.  
+[PINTO0309 - TensorflowLite-UNet - Github](https://github.com/PINTO0309/TensorflowLite-UNet/tree/master/data_set/VOCdevkit/person)  
+  
+The method to extract only the "Person" image is to download the VOC2012 dataset and extract it under the folder generated after decompressing,
+It is sufficient to extract all the images with the flag "1" set in **`VOCdevkit/VOC2012/ImageSets/Main/person_train.txt`** or **`VOCdevkit/VOC2012/ImageSets/Main/person_trainval.txt`**.  
+Even when extracting images other than "Person", it is possible to extract from the file name and extract with the same number.  
+Note that it is necessary to extract files one by one from each folder while synchronizing files of the same name from both the **`JPEGImages`** folder and **`SegmentationClass`** folder.  
+
 #### (2) UNet learning results
 #### (3) Slimming the checkpoint file
 #### (4) Generate compressed .pb file

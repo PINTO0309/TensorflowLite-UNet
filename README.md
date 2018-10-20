@@ -11,7 +11,8 @@ I added correspondence and one class segmentation of Tensorflow Lite to tks10 / 
 **https://qiita.com/tktktks10/items/0f551aea27d2f62ef708**  
   
 My Japanese Article is below.  
-**【Japanese Article】 [Tensorflow Lite / Tensorflow + RaspberryPi + Python implements ultra light "Semantic Segmentation" model "UNet" "ENet" Lightweight Model Part 2](https://qiita.com/PINTO/items/8221d8ccac55baf1f24e)**  
+**【Japanese Article】  
+[Tensorflow Lite / Tensorflow + RaspberryPi + Python implements ultra light "Semantic Segmentation" model "UNet" "ENet" Lightweight Model Part 2](https://qiita.com/PINTO/items/8221d8ccac55baf1f24e)**  
 
 ## Summary
 The final generation model of **`UNet's`** Pure Tensorflow, the size of the .pb file is **`31.1 MB`** or **`1.9 MB`**.  

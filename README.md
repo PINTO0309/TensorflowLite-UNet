@@ -1,5 +1,4 @@
 # Tensorflow Lite-UNet
-**As of October 18, 2018, README is under construction.**  
   
 Implementation of UNet by Tensorflow Lite.  
 Semantic segmentation without using GPU with RaspberryPi.  

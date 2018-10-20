@@ -64,6 +64,23 @@ My Japanese Article is below.
 ※ Fast but less accurate.**  
 <img src="https://github.com/PINTO0309/TensorflowLite-UNet/raw/master/media/13.jpeg" width="380"> <img src="https://github.com/PINTO0309/TensorflowLite-UNet/raw/master/media/14.jpeg" width="380">  
 ## Environment
+### 1. Development environment
+- Ubuntu 16.04
+- Tensorflow-GPU v1.11.0 <- Performing a test while switching mutually with CPU version, pip command / self build
+- Tensorflow-CPU v1.11.0 <- Performing a test while mutually switching with the GPU version, pip command / self build
+- Tesla K80 or Geforce GTX 1070 or Quadro P2000
+- CUDA 9.0
+- cuDNN 7.0
+- Python 2.7 or 3.5
+
+### 2. Execution environment
+- RaspberryPi3 + Raspbian Stretch
+- Bazel 0.17.2
+- Tensorflow v1.11.0 <- Self build
+- Tensorflow Lite v1.11.0 <- Self build
+- Python 2.7 or 3.5
+- OpenCV 3.4.2
+- MicroSD Card 32GB
 
 ## Environment construction procedure
 

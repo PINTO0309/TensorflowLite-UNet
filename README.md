@@ -294,11 +294,11 @@ $ git clone https://github.com/PINTO0309/TensorflowLite-UNet.git
 With only the training image of VOC2012, the number of samples is as small as 794, which is a major over-learning.  
 Execute the following program and inflate the image file by 20 times.  
 The inflating operation is carried out at random as follows.  
- (1) Smoothing  
- (2) Gaussian noise addition  
- (3) Salt & Pepper noise addition  
- (4) Rotation  
- (5) Inversion  
+- Smoothing  
+- Gaussian noise addition  
+- Salt & Pepper noise addition  
+- Rotation  
+- Inversion  
 
 #### (2) UNet learning results
 #### (3) Slimming the checkpoint file

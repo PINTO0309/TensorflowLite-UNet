@@ -24,6 +24,9 @@ I confirmed the operation with Tensorflow v1.11.0 and Tensorflow-gpu v1.11.0, Te
 </div></details><br><br>
 
 ## Inference images
+**＜Test generated image by GPU version Tensorflow v1.11.0 + UNet + Ubuntu16.04 PC＞  
+※ Size of learning model 31.1MB  
+※ Geforce GTX 1070 Inference time 1.83 sec**  
 <img src="https://github.com/PINTO0309/TensorflowLite-UNet/raw/master/media/01.jpeg" width="380"> <img src="https://github.com/PINTO0309/TensorflowLite-UNet/raw/master/media/02.jpeg" width="380">
 
 <img src="https://github.com/PINTO0309/TensorflowLite-UNet/raw/master/media/03.jpeg" width="380"> <img src="https://github.com/PINTO0309/TensorflowLite-UNet/raw/master/media/04.jpeg" width="380">

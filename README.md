@@ -22,9 +22,8 @@ The final generation model of **`ENet's`** Pure Tensorflow, the size of the .pb 
 
 ## Change history
 <details><summary>Change history</summary><div>
-  
-[Oct 19, 2018]　Initial release.<br>
-
+<br>
+[Oct 19, 2018]　Initial release.
 </div></details><br>
 
 ## Inference images

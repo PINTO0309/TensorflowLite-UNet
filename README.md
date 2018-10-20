@@ -496,7 +496,7 @@ $ ./tensorflow/contrib/lite/tools/make/build_rpi_lib.sh
 $ sudo bazel build tensorflow/contrib/lite/toco:toco
 ```
 Next, refer to the following repository and introduce Tenforflow Lite v1.11.0.  
-[PINTO0309 - Bazel_bin - Github](https://github.com/PINTO0309/Tensorflow-bin.git)  
+[PINTO0309 - Tensorflow-bin - Github](https://github.com/PINTO0309/Tensorflow-bin.git)  
 
 #### (4) Convert UNet's .pb file to .tflite file on RaspberryPi3
 

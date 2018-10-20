@@ -67,3 +67,5 @@ I confirmed the operation with Tensorflow v1.11.0 and Tensorflow-gpu v1.11.0, Te
 ## Environment
 
 ## Environment construction procedure
+
+## Reference article, thanks

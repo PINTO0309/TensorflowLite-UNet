@@ -85,8 +85,80 @@ My Japanese Article is below.
 ## Environment construction procedure
 ### 1. Construction of learning environment
 #### (1) Learning environment introduction to GPU equipped PC Ubuntu 16.04
+[1] Execute below. Introduction of CUDA 9.0, cu DNN 7.0.
+```
+$ cd ~
+$ sudo apt-get remove cuda-*
+$ sudo apt-get purge cuda-*
+
+# 1.Download cuda-repo-ubuntu1604_9.0.176-1_amd64.deb from NVIDIA
+# 2.Download libcudnn7_7.0.5.15-1+cuda9.0_amd64.deb from NVIDIA
+# 3.Download libcudnn7-dev_7.0.5.15-1+cuda9.0_amd64.deb from NVIDIA
+
+$ sudo dpkg -i libcudnn7*
+$ sudo dpkg -i cuda-*
+$ sudo apt-key add /var/cuda-repo-9-0-local/7fa2af80.pub
+$ sudo apt update
+$ sudo apt install cuda-9.0
+$ echo 'export PATH=/usr/local/cuda-9.0/bin:${PATH}' >> ~/.bashrc
+$ echo 'export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64:${LD_LIBRARY_PATH}' >> ~/.bashrc
+$ source ~/.bashrc
+$ sudo ldconfig
+$ nvcc -V
+$ cd ~;nano cudnn_version.cpp
+
+############################### Paste below. ###################################
+#include <cudnn.h>
+#include <iostream>
+
+int main(int argc, char** argv) {
+    std::cout << "CUDNN_VERSION: " << CUDNN_VERSION << std::endl;
+    return 0;
+}
+############################### Paste above ###################################
+
+$ nvcc cudnn_version.cpp -o cudnn_version
+$ ./cudnn_version
+$ nvidia-smi
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 396.44                 Driver Version: 396.44                    |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  GeForce GTX 107...  Off  | 00000000:01:00.0 Off |                  N/A |
+| N/A   54C    P0    32W /  N/A |    254MiB /  8119MiB |      1%      Default |
++-------------------------------+----------------------+----------------------+
+
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
+|    0      1461      G   /usr/lib/xorg/Xorg                           184MiB |
+|    0      3364      G   ...quest-channel-token=4480583668747587845    67MiB |
++-----------------------------------------------------------------------------+
+```
+[2] Introduce Tensorflow with the pip command and Clone the Github repository for learning.
+```
+$ cd ~
+$ sudo pip2 install tensorflow-gpu==1.11.0
+$ sudo pip3 install tensorflow-gpu==1.11.0
+$ git clone -b pinto0309work https://github.com/PINTO0309/TensorFlow-ENet.git
+$ cd TensorFlow-ENet
+$ git checkout pinto0309work
+```
+
 ### 2. Learning ENet and streamlining .pb
 #### (1) Learning ENet
+Execute the following command only when you want to learn with your own data set.  
+If you do not need to learn with your own data set, you can skip this phase.  
+Features and learning logic of this model are not touched on this occasion, but please refer Clone repository if you are interested. **[PINTO0309 - Tensorflow-ENet - Github](https://github.com/PINTO0309/TensorFlow-ENet.git)**  
+```
+$ cd ~/TensorFlow-ENet
+$ chmod 777 train.sh
+$ ./train.sh
+```
+
 #### (2) Slimming the checkpoint file
 #### (3) Generate compressed .pb file
 ### 3. Learning UNet and streamlining .pb

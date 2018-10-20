@@ -85,7 +85,7 @@ My Japanese Article is below.
 ## Environment construction procedure
 ### 1. Construction of learning environment
 #### (1) Learning environment introduction to GPU equipped PC Ubuntu 16.04
-[1] Execute below. Introduction of CUDA 9.0, cu DNN 7.0.
+[1] Execute below. Introduction of CUDA 9.0, cuDNN 7.0.
 ```
 $ cd ~
 $ sudo apt-get remove cuda-*

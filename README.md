@@ -84,8 +84,16 @@ My Japanese Article is below.
 
 ## Environment construction procedure
 ### 1. Construction of learning environment
+#### (1) Learning environment introduction to GPU equipped PC Ubuntu 16.04
 ### 2. Learning ENet and streamlining .pb
+#### (1) Learning ENet
+#### (2) Slimming the checkpoint file
+#### (3) Generate compressed .pb file
 ### 3. Learning UNet and streamlining .pb
+#### (1) Learning UNet
+#### (2) UNet learning results
+#### (3) Slimming the checkpoint file
+#### (4) Generate compressed .pb file
 ### 4. Execution environment construction
 ### 5. Operation verification
 

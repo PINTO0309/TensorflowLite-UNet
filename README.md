@@ -264,6 +264,18 @@ if __name__ == '__main__':
 </div></details><br>
 
 #### (3) Generate compressed .pb file
+Execute the following command to generate compressed .pb file from .pbtxt.  
+Since two types of Output Nodes are described in comma-separated form, the inference result can receive output from two kinds of Nodes.  
+When executing the command, 1.78 MB **`semanticsegmentation_enet.pb`** file is generated under the **`checkpoint`** folder.  
+```
+$ python freeze_graph.py \
+--input_graph=checkpoint/semanticsegmentation_enet.pbtxt \
+--input_checkpoint=checkpoint/modelfinal.ckpt-13800 \
+--output_graph=checkpoint/semanticsegmentation_enet.pb \
+--output_node_names=ENet/fullconv/BiasAdd,ENet/logits_to_softmax \
+--input_binary=False
+```
+
 ### 3. Learning UNet and streamlining .pb
 #### (1) Learning UNet
 #### (2) UNet learning results

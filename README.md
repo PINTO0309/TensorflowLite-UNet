@@ -281,7 +281,7 @@ $ python freeze_graph.py \
 #### (1) Learning UNet
 Execute the following command to Clone the learning repository.  
 All images are extracted only for the image files that show "Person", and they are already deployed in the dataset folder.  
-[PINTO0309 - TensorflowLite-UNet - Github](https://github.com/PINTO0309/TensorflowLite-UNet/tree/master/data_set/VOCdevkit/person)  
+**[PINTO0309 - TensorflowLite-UNet - Github](https://github.com/PINTO0309/TensorflowLite-UNet/tree/master/data_set/VOCdevkit/person)**  
   
 The method to extract only the "Person" image is to download the VOC2012 dataset and extract it under the folder generated after decompressing,
 It is sufficient to extract all the images with the flag "1" set in **`VOCdevkit/VOC2012/ImageSets/Main/person_train.txt`** or **`VOCdevkit/VOC2012/ImageSets/Main/person_trainval.txt`**.  

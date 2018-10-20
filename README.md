@@ -14,11 +14,11 @@ My Japanese Article is below.
 **【Japanese Article】 [Tensorflow Lite / Tensorflow + RaspberryPi + Python implements ultra light "Semantic Segmentation" model "UNet" "ENet" Lightweight Model Part 2](https://qiita.com/PINTO/items/8221d8ccac55baf1f24e)**  
 
 ## Summary
-The final generation model of UNet's Pure Tensorflow, the size of the .pb file is **`31.1 MB`** or **`1.9 MB`**.  
-The final generation model of UNet's Tenfowflow Lite conversion + Quantize, the file size of the .tflite file is **`9.9 MB`** or **`625 KB`**.  
+The final generation model of **`UNet's`** Pure Tensorflow, the size of the .pb file is **`31.1 MB`** or **`1.9 MB`**.  
+The final generation model of **`UNet's`** Tenfowflow Lite conversion + Quantize, the file size of the .tflite file is **`9.9 MB`** or **`625 KB`**.  
 I tried two model sizes by adjusting the number of Convolution layer filters.  
   
-The final generation model of ENet's Pure Tensorflow, the size of the .pb file is **`1.87 MB`**.  
+The final generation model of **`ENet's`** Pure Tensorflow, the size of the .pb file is **`1.87 MB`**.  
 
 ## Change history
 <details><summary>Change history</summary><div>

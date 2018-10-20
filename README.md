@@ -497,6 +497,11 @@ $ sudo bazel build tensorflow/contrib/lite/toco:toco
 ```
 Next, refer to the following repository and introduce Tenforflow Lite v1.11.0.  
 **[PINTO0309 - Tensorflow-bin - Github](https://github.com/PINTO0309/Tensorflow-bin.git)**  
+  
+Next, execute the following command to install the additional dependency package.  
+```
+$ sudo apt install -y python-scipy python3-scipy
+```
 
 #### (4) Convert UNet's .pb file to .tflite file on RaspberryPi3
 

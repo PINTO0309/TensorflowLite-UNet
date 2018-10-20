@@ -10,7 +10,7 @@ Added correspondence and one class segmentation of TensorflowLite to tks10/segme
 **https://github.com/tks10/segmentation_unet.git**  
 **https://qiita.com/tktktks10/items/0f551aea27d2f62ef708**  
   
-My Article is below.  
+My Japanese Article is below.  
 **【Japanese Article】 [Tensorflow Lite / Tensorflow + RaspberryPi + Python implements ultra light "Semantic Segmentation" model "UNet" "ENet" Lightweight Model Part 2](https://qiita.com/PINTO/items/8221d8ccac55baf1f24e)**  
 
 ## Summary

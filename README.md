@@ -583,3 +583,4 @@ Registration failed.
 **https://github.com/tensorflow/tensorflow/blob/master/tensorflow/contrib/lite/g3doc/custom_operators.md**  
 **https://github.com/tensorflow/tensorflow/issues/21574**  
 **https://docs.bazel.build/versions/master/command-line-reference.html**  
+**https://towardsdatascience.com/background-removal-with-deep-learning-c4f2104b3157**  

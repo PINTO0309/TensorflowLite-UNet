@@ -84,7 +84,7 @@ The final generation model of **`ENet's`** Pure Tensorflow, the size of the .pb 
 - Tensorflow v1.11.0 <- Self build
 - Tensorflow Lite v1.11.0 <- Self build
 - Python 2.7 or 3.5
-- **[OpenCV 3.4.2](https://github.com/PINTO0309/OpenCVonARMv7.git)**
+- **[OpenCV 3.4.x](https://github.com/PINTO0309/OpenCVonARMv7.git)**
 - MicroSD Card 32GB
 
 ## Environment construction procedure

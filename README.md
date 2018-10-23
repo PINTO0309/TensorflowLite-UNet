@@ -539,7 +539,7 @@ $ python predict_segmentation_CPU.py
 2. Validation of RaspberryPi3 in quantization effective UNet model by Tensorflow Lite v1.11.0.  
 ```
 $ cp ~/tensorflow/output/semanticsegmentation_frozen_person_quantized_32.tflite ~/TensorflowLite-UNet/model
-$ ~/TensorflowLite-UNet
+$ cd ~/TensorflowLite-UNet
 $ python tflite_test.py
 ```
 

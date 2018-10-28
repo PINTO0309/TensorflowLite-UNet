@@ -547,6 +547,8 @@ $ python tflite_test.py
 When converting .tflite, it is an error that "custom operation can not be installed". 
 Following the tutorial on Tensorflow Lite, you need to implement custom operations yourself in C ++.  
 Below is error message sample.  
+**[Feature Request] Addition of new operation to Tensorflow Lite for "ENet" [#23320](https://github.com/tensorflow/tensorflow/issues/23320)**  
+
 ```
 pi@raspberrypi:~/TensorflowLite-ENet $ python main.py
 Traceback (most recent call last):

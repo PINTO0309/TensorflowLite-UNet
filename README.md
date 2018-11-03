@@ -24,8 +24,8 @@ The final generation model of **`ENet's`** Pure Tensorflow, the size of the .pb 
 ## Change history
 <details><summary>Change history</summary><div>
 <br>
-[Oct 19, 2018]　Initial release.  
-[Nov 3, 2018]　Tuned Tensorflow faster. (Enabled jemalloc)
+[Oct 19, 2018]　Initial release.<br>
+[Nov 03, 2018]　Tuned Tensorflow faster. (Enabled jemalloc)
 </div></details><br>
 
 ## Inference images

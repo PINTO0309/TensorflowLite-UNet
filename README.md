@@ -24,7 +24,8 @@ The final generation model of **`ENet's`** Pure Tensorflow, the size of the .pb 
 ## Change history
 <details><summary>Change history</summary><div>
 <br>
-[Oct 19, 2018]　Initial release.
+[Oct 19, 2018]　Initial release.  
+[Nov 3, 2018]　Tuned Tensorflow faster. (Enabled jemalloc)
 </div></details><br>
 
 ## Inference images
@@ -81,8 +82,8 @@ The final generation model of **`ENet's`** Pure Tensorflow, the size of the .pb 
 ### 2. Execution environment
 - RaspberryPi3 + Raspbian Stretch
 - Bazel 0.17.2
-- Tensorflow v1.11.0 <- Self build
-- Tensorflow Lite v1.11.0 <- Self build
+- **[Tensorflow v1.11.0](https://github.com/PINTO0309/Tensorflow-bin.git)** <- Self build
+- **[Tensorflow Lite v1.11.0](https://github.com/PINTO0309/Tensorflow-bin.git)** <- Self build
 - Python 2.7 or 3.5
 - **[OpenCV 3.4.x](https://github.com/PINTO0309/OpenCVonARMv7.git)**
 - MicroSD Card 32GB

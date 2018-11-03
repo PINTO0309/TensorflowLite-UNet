@@ -305,6 +305,9 @@ The inflating operation is carried out at random as follows.
 - Rotation  
 - Inversion  
   
+![21](media/21.jpg) ![23](media/23.jpg) ![25](media/25.jpg) ![27](media/27.jpg) ![29](media/29.jpg)  
+![22](media/22.png) ![24](media/24.png) ![26](media/26.png) ![28](media/28.png) ![30](media/30.png)  
+  
 The image after padding is saved in **`data_set/VOCdevkit/person/JPEGImagesOUT`** and **`data_set/VOCdevkit/person/SegmentationClassOUT`**.  
 You can adjust multiples of padding by changing the number of **`increase_num = 20`** to the number you like.  
 However, since the number of images that can be processed at one time depends on the VRAM capacity of the GPU, it is necessary to adjust the numerical value small if OutOfMemory appears.  

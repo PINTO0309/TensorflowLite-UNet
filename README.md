@@ -52,7 +52,7 @@ The final generation model of **`ENet's`** Pure Tensorflow, the size of the .pb 
   
 **＜Test generated image by CPU version Tensorflow v1.11.0 (Self build) + ENet + RaspberryPi3＞  
 ※ Size of learning model 1.87 MB  
-※ Inference time with ARM Cortex-A53 10.2 sec  
+※ Inference time with ARM Cortex-A53 9.5 sec  
 ※ Using Tensorflow v1.11.0 introduced with the pip command results in "Bus error" and terminates abnormally.**  
 <img src="https://github.com/PINTO0309/TensorflowLite-UNet/raw/master/media/09.jpeg" width="380"> <img src="https://github.com/PINTO0309/TensorflowLite-UNet/raw/master/media/10.jpeg" width="380">
   

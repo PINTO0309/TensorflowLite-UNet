@@ -1,5 +1,10 @@
 ######################################################
 # Program for calculating BGR pixel average value
+#
+# [Reference information]
+#   meanB = 90.130
+#   meanG = 97.561
+#   meanR = 103.871
 ######################################################
 
 import cv2
